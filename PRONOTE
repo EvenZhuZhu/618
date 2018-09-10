@@ -1,0 +1,24 @@
+公告从右向左移动
+.carousel {
+  position: relative;
+  width:6.8rem;
+}
+
+.carousel ul {
+  left:6.8rem;
+}
+
+@keyframes mymove {
+  0% {
+    left:6.8rem;
+  }
+  100% {
+    left: -500px;
+  }
+}
+
+.carousel ul{
+  animation: mymove 20s infinite;
+  -webkit-animation: mymove 20s linear -3s infinite;
+  position: absolute;
+}

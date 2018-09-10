@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<!--header-->
+<header>
+  <a href="#" class="left"></a>
+  <div class="right"></div>
+  <div class="center">标题填写处</div>
+</header>
+
+<!--banner-->
+<img src="./images/banner.jpg" alt="" class="banner">
+
+
+<div class="outer">
+  <span></span>
+  <div class="carousel">
+    <ul>
+      <li>
+        2018.6.15-6.21端午节活动期间，购买指定29类、30类食品、33类酒水类商标的客户，可免费赠送一件注册！
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="fr">
+  <div class="fr_left">
+    <input type="text" placeholder="请输入商标类别或名称">
+    <button></button>
+  </div>
+  <select name="" id="" value="">
+    <option value="商标分类" disabled selected style="display:none;">商标分类</option>
+    <option value="">01 商标分尅</option>
+    <option value="">02 商标分尅</option>
+    <option value="">03 商标分尅</option>
+    <option value="">04 商标分尅</option>
+  </select>
+</div>
+
+
+<!--prolist-->
+<div class="prolist">
+  <ul class="list">
+    <li>
+      <a href="#">
+        <img src="./images/list1.png" alt="">
+        <p class="name">商标名填写处</p>
+        <p class="bottomdes">形似国母名丽媛，寓意享受国级别的护肤、护体、护发体验形似国母名丽媛，寓意享受国级别的护肤、护体、护发体验</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="./images/list1.png" alt="">
+        <p class="name">商标名填写处</p>
+        <p class="bottomdes">形似国母名丽媛，寓意享受国级别的护肤、护体、护发体验形似国母名丽媛，寓意享受国级别的护肤、护体、护发体验</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="./images/list1.png" alt="">
+        <p class="name">商标名填写处</p>
+        <p class="bottomdes">形似国母名丽媛，寓意享受国级别的护肤、护体、护发体验形似国母名丽媛，寓意享受国级别的护肤、护体、护发体验</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="./images/list1.png" alt="">
+        <p class="name">商标名填写处</p>
+        <p class="bottomdes">形似国母名丽媛，寓意享受国级别的护肤、护体、护发体验形似国母名丽媛，寓意享受国级别的护肤、护体、护发体验</p>
+      </a>
+    </li>
+  </ul>
+  <div class="nulls">已经没有数据了</div>
+  <img src="./images/des.jpg" alt="">
+</div>
+
+<script src="./lib/jquery.min.js"></script>
+<script>
+  //新闻公告滚动条
+  // $lis = $('.carousel ul li');
+  // $('.carousel ul').append($lis[0].cloneNode(true));
+  // var index = 0;
+  // setInterval(function () {
+  //   $('.carousel ul').on('transitionend', function () {
+  //     if (index >= $lis.length) {
+  //       index = 0;
+  //       $('.carousel ul').css('-webkit-transition', 'none');
+  //       $('.carousel ul').css('-webkit-transform', 'translateX(' + 0);
+  //     }
+  //   })
+  //   index++;
+  //   $('.carousel ul').css('-webkit-transition', '-webkit-transform 4s linear');
+  //   $('.carousel ul').css('-webkit-transform', 'translateX(' + (-index * $lis[0].offsetWidth + 30) + 'px)')
+  // }, 4000);
+  //
+  
+  var unSelected = "#ccc";
+  var selected = "#000";
+  $(".fr select").css("color", unSelected);
+  $(".fr select option").css("color", selected);
+  $(".fr select").change(function () {
+    var selItem = $(this).val();
+    if (selItem == $(this).find('option:first').val()) {
+      $(this).css("color", unSelected);
+    } else {
+      $(this).css("color", selected);
+    }
+  });
+
+</script>
+</body>
+</html>
